@@ -77,9 +77,10 @@ you can find the results in eval.csv:
 exp_results
    --- 20251206
       --- 235527finger250
-         --- model.pt......
-         --- 112057_seed2
-            --- eval.csv
+         --- model.pt...
+         --- 20251207
+            --- 112057_seed2
+               --- eval.csv
 ...
 ```
 
