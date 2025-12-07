@@ -9,16 +9,19 @@ This repository provides the continuous implementation of BCV-LR. For discrete c
 
 
 ## Data preparation
-Download the procgen expert video data [here](https://drive.google.com/drive/folders/1XjpcfOm0NafPYFPnNtoHfhJ4nHVkQSB1) provided by lapo, unzip it, and place it in the expert_data directory. The expert_data dir should look like this:
+Download the expert video data [here](https://www.modelscope.cn/datasets/lxcasia/continuous_expertvideos_1M) and place it in the expert_data directory. Please rename the .npz file and make the expert_data dir look like this:
 
 ```
 expert_data
-   --- starpilot
+   --- finger250
       --- train
-      --- test
-   --- bigfish
+         --- 100000.npz
+   --- reacherhard250
       --- train
-      --- test
+         --- 100000.npz
+   --- bottomleft
+      --- train
+         --- 100000.npz
 ...
 ```
 
@@ -26,7 +29,7 @@ expert_data
 
 Enter the repository and use conda to create a environment.
 ```
-cd BCV-LR-discrete
+cd BCV-LR
 
 conda env create -f environment.yml
 ```
@@ -52,20 +55,20 @@ You will find the pre-trained models in the folder exp_results, like:
 ```
 exp_results
    --- 20251206
-      --- 213038starpilot
+      --- 235527finger250
          --- model.pt......
 ...
 ```
 
 ## Online stage
 
-revise the exp_name in the config.yaml to match the offline pre-trained models. For example, to run the starpilot experiments above, you should revise the exp_name to:
+revise the exp_name in the config.yaml to match the offline pre-trained models. For example, to run the finger experiments above, you should revise the exp_name to:
 ```
 ###config.yaml
-exp_name: 20251206-213038starpilot
+exp_name: 20251206-235527finger250
 ```
 
-then you can run the online stage and see the results in wandb:
+then you can run the online stage and see the results in exp_results folder:
 ```
 python run_online.py
 ```
@@ -91,7 +94,7 @@ url={https://openreview.net/forum?id=cx1KfZerNY}
 ```
 
 ## Acknowledgement
-The implementation and data are built on [LAPO](https://github.com/schmidtdominik/LAPO).
+This implementation is built on [DrQV2]([LAPO](https://github.com/schmidtdominik/LAPO)) and [LAPO](https://github.com/schmidtdominik/LAPO).
 
 
 
