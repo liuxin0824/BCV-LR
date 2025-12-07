@@ -19,7 +19,7 @@ expert_data
    --- reacherhard250
       --- train
          --- 100000.npz
-   --- bottomleft
+   --- pointeasy250
       --- train
          --- 100000.npz
 ...
