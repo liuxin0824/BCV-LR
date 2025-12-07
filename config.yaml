@@ -1,0 +1,41 @@
+env_name: finger250
+exp_name: 20251206-235527finger250
+stage_exp_name: ~ 
+
+wm_loss_alpha: 1e-5    
+wm_opt_lr: 1e-5
+policy_lr: 1e-3
+decoder_lr: 1e-3
+
+idm_lr: 1e-3
+
+replay_buffer_capacity: 100000
+
+
+
+model:
+  wm_scale: 24
+  idm_impala_scale: 4
+  policy_impala_scale: 4
+  vq:
+    enabled: true
+    num_codebooks: 2
+    num_discrete_latents: 4  
+    emb_dim: 16     
+    num_embs: 64 
+    commitment_cost: 0.05
+    decay: 0.999
+
+offline_pt:
+  lr: 3e-4  
+  bs: 128
+  steps: 50000
+
+latent_policy_imitaiton:
+  lr: 2e-4
+  bs: 128
+  steps: 20000
+
+online_ft:
+  steps: 50000 # action repeat set to 2, 50k steps = 100k frames
+  
