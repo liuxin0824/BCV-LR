@@ -44,7 +44,7 @@ conda activate BCV-LR
 
 ## Offline stage
 
-To achieve offline pretraining on videos and obtain pre-trained models, run:
+Make the env_name in config.yaml match the expert videos name (for example, to run Finger_spin, set env_name to finger250), and then achieve offline pretraining by:
 
 ```
 python run_offline.py
