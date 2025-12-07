@@ -94,7 +94,7 @@ url={https://openreview.net/forum?id=cx1KfZerNY}
 ```
 
 ## Acknowledgement
-This implementation is built on [DrQV2]([LAPO](https://github.com/schmidtdominik/LAPO)) and [LAPO](https://github.com/schmidtdominik/LAPO).
+This implementation is built on [DrQV2](https://github.com/facebookresearch/drqv2) and [LAPO](https://github.com/schmidtdominik/LAPO).
 
 
 
