@@ -68,12 +68,20 @@ revise the exp_name in the config.yaml to match the offline pre-trained models. 
 exp_name: 20251206-235527finger250
 ```
 
-then you can run the online stage and see the results in exp_results folder:
+then you can run the online stage:
 ```
 python run_online.py
 ```
-
-
+you can find the results in eval.csv:
+```
+exp_results
+   --- 20251206
+      --- 235527finger250
+         --- model.pt......
+         --- 112057_seed2
+            --- eval.csv
+...
+```
 
 
 
